@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form elements</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Robot Builder: Configuration Form</title>
+      </head>
+      <body>
+        <h1>Design Your Dream Robot</h1>
+        <p>
+          Fill out the form below to customize every aspect of your personal
+          robot companion!
+        </p>
+
+        <form action="#" method="post">
+          <!-- Basic Identification -->
+          <fieldset>
+            <legend>Basic Identification</legend>
+            <br />
+            <label for="robotName">Robot Name:</label>
+            <input
+              type="text"
+              id="robotName"
+              name="robotName"
+              placeholder="Enter a fun name"
+              required
+            />
+            <br /><br />
+
+            <label for="modelNum">Model Number:</label>
+            <input
+              type="text"
+              id="modelNum"
+              name="modelNum"
+              placeholder="ABCD-1234"
+              required
+            />
+            <!-- pattern="[A-Z0-9]{4}-[A-Z0-9]{4}" -->
+            <small>(Format: ABCD-1234)</small>
+            <br />
+            <!-- <br /> -->
+
+            <!-- <label for="serialCode">Serial Code (hidden):</label>
+            <input
+              type="hidden"
+              id="serialCode"
+              name="serialCode"
+              value="RX-00-2025"
+            />
+            <em>(auto-generated)</em> -->
+          </fieldset>
+
+          <br /><br />
+
+          <!-- Appearance Settings -->
+          <fieldset>
+            <legend>Appearance Settings</legend>
+            <br />
+            <label for="chassisColor">Chassis Color:</label>
+            <input
+              type="color"
+              id="chassisColor"
+              name="chassisColor"
+              value="#ff0000"
+            />
+            <br /><br />
+
+            <!-- <label for="heightRange">Height (cm):</label>
+            <input
+              type="range"
+              id="heightRange"
+              name="heightRange"
+              min="50"
+              max="200"
+              value="120"
+            />
+            <span id="heightValue">120</span> cm <br /><br /> -->
+
+            <label>Body Style:</label>
+            <input
+              type="radio"
+              id="styleA"
+              name="bodyStyle"
+              value="humanoid"
+              checked
+            />
+            <label for="styleA">Humanoid</label>
+            <input type="radio" id="styleB" name="bodyStyle" value="wheeled" />
+            <label for="styleB">Wheeled</label>
+            <input
+              type="radio"
+              id="styleC"
+              name="bodyStyle"
+              value="quadruped"
+            />
+            <label for="styleC">Quadruped</label>
+            <br /><br />
+
+            <label for="accessories">Accessories:</label>
+            <input
+              type="checkbox"
+              id="laser"
+              name="accessories"
+              value="laser"
+            />
+            <label for="laser">Laser Pointer</label>
+            <input
+              type="checkbox"
+              id="camera"
+              name="accessories"
+              value="camera"
+            />
+            <label for="camera">HD Camera</label>
+            <input
+              type="checkbox"
+              id="speaker"
+              name="accessories"
+              value="speaker"
+            />
+            <label for="speaker">Speaker</label>
+            <br /><br />
+
+            <label for="">Select size:</label>
+            <select name="" id="">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </fieldset>
+
+          <br /><br />
+
+          <!-- Scheduling & Details -->
+          <fieldset>
+            <legend>Scheduling & Details</legend>
+            <br />
+            <label for="activationDate">Activation Date:</label>
+            <input
+              type="date"
+              id="activationDate"
+              name="activationDate"
+              required
+            />
+            <br /><br />
+
+            <label for="maintenanceTime">Preferred Maintenance Time:</label>
+            <input type="time" id="maintenanceTime" name="maintenanceTime" />
+            <br /><br />
+
+            <label for="softwareVersion">Software Version:</label>
+            <input
+              type="number"
+              id="softwareVersion"
+              name="softwareVersion"
+              min="1"
+              max="10"
+              step="0.1"
+              value="1.0"
+            />
+            <br /><br />
+
+            <label for="launchDateTime">Launch Date & Time:</label>
+            <input
+              type="datetime-local"
+              id="launchDateTime"
+              name="launchDateTime"
+            />
+            <br /><br />
+
+            <label for="secretCode">Secret Passphrase:</label>
+            <input type="password" id="secretCode" name="secretCode" />
+          </fieldset>
+
+          <br /><br />
+
+          <!-- Contact & Misc -->
+          <fieldset>
+            <legend>Contact & Miscellaneous</legend>
+            <br />
+            <label for="email">Owner Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+            <br /><br />
+
+            <label for="website">Project Website:</label>
+            <input
+              type="url"
+              id="website"
+              name="website"
+              placeholder="https://myrobotproject.com"
+            />
+            <br /><br />
+
+            <label for="supportPhone">Support Phone:</label>
+            <input
+              type="tel"
+              id="supportPhone"
+              name="supportPhone"
+              placeholder="9878653412"
+            />
+            <br /><br />
+
+            <label for="moduleSearch">Search Modules:</label>
+            <input
+              type="search"
+              id="moduleSearch"
+              name="moduleSearch"
+              placeholder="e.g., vision, AI"
+            />
+            <br /><br />
+
+            <label for="blueprint">Upload Blueprint:</label>
+            <input
+              type="file"
+              id="blueprint"
+              name="blueprint"
+              accept=".pdf,.png,.jpg"
+            />
+            <br /><br />
+
+            <label for="comments">Additional Comments:</label>
+            <textarea
+              id="comments"
+              name="comments"
+              rows="4"
+              cols="50"
+              placeholder="Any special requests or notes..."
+            ></textarea>
+          </fieldset>
+
+          <br /><br />
+
+          <!-- Submit Controls -->
+          <input type="submit" />
+          <button type="reset">Reset Form</button>
+          <br /><br />
+          <button type="submit">
+            <img src="thumbs-up-icon.svg" alt="thumbs-up-icon" height="35px" width="35px" />
+          </button>
+        </form>
+
+        <!-- <script>
+          // Live update of range value
+          const rangeInput = document.getElementById("heightRange");
+          const rangeValue = document.getElementById("heightValue");
+          rangeInput.addEventListener("input", () => {
+            rangeValue.textContent = rangeInput.value;
+          });
+        </script> -->
+      </body>
+    </html>
+  </body>
+</html>
